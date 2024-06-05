@@ -28,7 +28,13 @@ a:hover {
 
 body {
     margin: 0;
-    display: flex;
+    font-family: Helvetica Neue, sans-serif;
+    color: #444;
+    background: #022c43;
+    overflow: hidden;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     place-items: center;
     min-width: 320px;
     min-height: 100vh;
