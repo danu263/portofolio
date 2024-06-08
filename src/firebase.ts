@@ -14,7 +14,16 @@ import {
     Firestore,
 } from 'firebase/firestore';
 
-const firebaseConfig = {};
+const env = import.meta.env;
+const firebaseConfig = {
+    apiKey: env.VITE_API_KEY,
+    authDomain: 'portfolio-92e06.firebaseapp.com',
+    projectId: 'portfolio-92e06',
+    storageBucket: 'portfolio-92e06.appspot.com',
+    messagingSenderId: '876827483340',
+    appId: '1:876827483340:web:ba363d9bb19a7ef37bf669',
+    measurementId: 'G-40VMSQKQXP',
+};
 
 let app: FirebaseApp;
 let provider: GoogleAuthProvider;

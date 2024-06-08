@@ -8,6 +8,10 @@ import { Portfolio } from './components/Portfolio/portfolio.tsx';
 // import {Dashboard} from "./components/Dashboard/dashboard.tsx";
 
 function App() {
+    console.log(import.meta.env);
+    console.log(import.meta.env.MODE);
+    console.log(import.meta.env.API_KEY);
+    console.log(import.meta.env.API_KEY);
     return (
         <>
             <Routes>
