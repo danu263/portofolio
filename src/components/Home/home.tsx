@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-// import { Link } from 'react-router-dom';
 import Loader from 'react-loaders';
 import { AnimatedLetters } from '../AnimatedLetters/animatedLetters.tsx';
 import { Logo } from './logo.tsx';
@@ -57,9 +56,6 @@ export const Home = () => {
                         />
                     </h1>
                     <h2>Full-stack Developer / Java Expert / Lima, Peru</h2>
-                    {/*<Link to="/contact" className="flat-button">*/}
-                    {/*    CONTACT ME*/}
-                    {/*</Link>*/}
                 </div>
                 <Logo />
             </div>
