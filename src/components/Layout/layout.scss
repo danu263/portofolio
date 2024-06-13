@@ -1,3 +1,6 @@
+.App {
+  height: 100vh;
+}
 .page {
   @apply w-full h-full absolute;
 }
@@ -37,6 +40,7 @@
 }
 
 .container.contact-page,
+//.container.home-page,
 .container.about-page,
 .container.portfolio-page {
 
@@ -50,30 +54,6 @@
     margin-bottom: 40px;
     left: -10px;
 
-    &:before {
-      content: '<h1>';
-      font-family: 'La Belle Aurore', cursive;
-      color: #ffd700;
-      font-size: 18px;
-      position: absolute;
-      margin-top: -10px;
-      left: -10px;
-      opacity: 0.6;
-      line-height: 18px;
-    }
-
-    &:after {
-      content: '<h1/>';
-      font-family: 'La Belle Aurore', cursive;
-      color: #ffd700;
-      font-size: 18px;
-      line-height: 18px;
-      position: absolute;
-      left: -30px;
-      bottom: -20px;
-      margin-left: 20px;
-      opacity: 0.6;
-    }
   }
 
   p {
@@ -112,14 +92,13 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
   .page {
     position: initial;
   }
 
   .container {
     position: initial;
-    height: auto;
     min-height: auto;
 
     &.contact-page,

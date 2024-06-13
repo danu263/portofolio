@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Loader from 'react-loaders';
-import LogoTitle from '../../assets/images/logo-s.png';
 import { AnimatedLetters } from '../AnimatedLetters/animatedLetters.tsx';
 import { Logo } from './logo.tsx';
 import './home.scss';
@@ -44,10 +43,7 @@ export const Home = () => {
                         <br />
                         <span className={`${letterClass} _13`}>I</span>
                         <span className={`${letterClass} _14`}>'m</span>
-                        <img
-                            src={LogoTitle}
-                            alt="JavaScript Developer Name, Web Developer Name"
-                        />
+                        <br />
                         <AnimatedLetters
                             letterClass={letterClass}
                             strArray={nameArray}
@@ -60,10 +56,10 @@ export const Home = () => {
                             idx={22}
                         />
                     </h1>
-                    <h2>Front End Developer / JavaScript Expert / Youtuber</h2>
-                    <Link to="/contact" className="flat-button">
-                        CONTACT ME
-                    </Link>
+                    <h2>Full-stack Developer / Java Expert / Lima, Peru</h2>
+                    {/*<Link to="/contact" className="flat-button">*/}
+                    {/*    CONTACT ME*/}
+                    {/*</Link>*/}
                 </div>
                 <Logo />
             </div>

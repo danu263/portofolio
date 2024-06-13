@@ -1,7 +1,7 @@
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
-import LogoS from '../../assets/images/logo-s.png';
-import LogoSubtitle from '../../assets/images/logo_sub.png';
+// import LogoS from '../../assets/images/logo-s.png';
+// import LogoSubtitle from '../../assets/images/logo_sub.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faLinkedin,
@@ -24,10 +24,10 @@ export const Sidebar = () => {
 
     return (
         <div className="nav-bar">
-            <Link className="logo" to="/" onClick={() => setShowNav(false)}>
-                <img src={LogoS} alt="Logo" />
-                <img className="sub-logo" src={LogoSubtitle} alt="slobodan" />
-            </Link>
+            {/*<Link className="logo" to="/" onClick={() => setShowNav(false)}>*/}
+            {/*    <img src={LogoS} alt="Logo" />*/}
+            {/*    <img className="sub-logo" src={LogoSubtitle} alt="slobodan" />*/}
+            {/*</Link>*/}
             <nav className={showNav ? 'mobile-show' : ''}>
                 <NavLink to="/" onClick={() => setShowNav(false)}>
                     <FontAwesomeIcon icon={faHome} color="#4d4d4e" />

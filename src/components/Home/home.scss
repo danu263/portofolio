@@ -1,7 +1,11 @@
 .home-page {
+  position: relative;
+  display: flex;
+  justify-content: center;
   .text-zone {
-    @apply absolute left-[10%] top-[50%] max-h-[90%] w-[40%] ;
-    transform: translateY(-50%);
+    @apply relative max-h-[90%] flex flex-wrap flex-col justify-center;
+    text-align: right;
+    align-items: flex-end;
   }
 
   h1 {
@@ -11,29 +15,6 @@
     margin: 0;
     font-family: 'Coolvetica';
     font-weight: 400;
-
-    &:before {
-      content: '<h1>';
-      font-family: 'La Belle Aurore', cursive;
-      color: #ffd700;
-      font-size: 18px;
-      position: absolute;
-      margin-top: -40px;
-      left: -15px;
-      opacity: 0.6;
-    }
-
-    &:after {
-      content: '<h1/>';
-      font-family: 'La Belle Aurore', cursive;
-      color: #ffd700;
-      font-size: 18px;
-      position: absolute;
-      margin-top: 18px;
-      margin-left: 20px;
-      animation: fadeIn 1s 1.7s backwards;
-      opacity: 0.6;
-    }
 
     img {
       margin-left: 20px;
@@ -78,19 +59,19 @@
 
 
 
-@media screen and (max-width: 1200px) {
-  .tags,
-  .home-page h1:before,
-  .home-page h1:after {
-    display: none;
+@media screen and (max-width: 800px) {
+  .home-page {
+    @apply justify-center flex-col;
   }
-
   .home-page .text-zone {
     position: initial;
     width: 100%;
     transform: none;
     padding: 10px;
     box-sizing: border-box;
+    //@apply relative flex flex-wrap flex-row justify-center;
+    text-align: center;
+    align-items: center;
   }
 
   .home-page .flat-button {
@@ -98,25 +79,5 @@
     display: block;
     margin: 20px auto 0 auto;
     width: 124px;
-  }
-
-  .logo-container {
-    position: relative;
-    width: 100px;
-    height: auto;
-    top: 50px;
-    right: 0;
-    box-sizing: border-box;
-    margin: auto;
-    left: 0;
-  }
-
-  .logo-container svg {
-    position: absolute;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: 0;
-    margin: auto;
   }
 }

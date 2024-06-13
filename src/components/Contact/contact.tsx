@@ -1,9 +1,10 @@
 import { FormEvent, useEffect, useRef, useState } from 'react';
-import { AnimatedLetters } from './AnimatedLetters/animatedLetters.tsx';
+import { AnimatedLetters } from '../AnimatedLetters/animatedLetters.tsx';
 import emailjs from '@emailjs/browser';
 import { LatLngExpression } from 'leaflet';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import Loader from 'react-loaders';
+import './contact.scss';
 
 export const Contact = () => {
     const position: LatLngExpression = [44.96366, 19.61045];
@@ -125,7 +126,7 @@ export const Contact = () => {
                 <div className="map-wrap">
                     <MapContainer center={position} zoom={13}>
                         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                        <Marker position={[44.96366, 19.61045]}>
+                        <Marker position={position}>
                             <Popup>
                                 Sloba lives here, come over for a cup of coffee
                                 :)
