@@ -3,11 +3,11 @@ import { Construct } from 'constructs';
 import {
     R53CloudFrontDistributionARecord,
     R53HostedZone,
-} from './constructs/route53';
-import { config } from '../config';
-import { AcmCertificate } from './constructs/acm';
-import { StaticSiteBucket, StaticWebsiteDeployment } from './constructs/s3';
-import { CloudFrontWebDistribution } from './constructs/cloudfront';
+} from './lib/constructs/route53';
+import { config } from './config';
+import { AcmCertificate } from './lib/constructs/acm';
+import { StaticSiteBucket, StaticWebsiteDeployment } from './lib/constructs/s3';
+import { CloudFrontWebDistribution } from './lib/constructs/cloudfront';
 
 export class InfraStack extends Stack {
     constructor(scope: Construct, id: string, props?: StackProps) {
@@ -33,7 +33,7 @@ export class InfraStack extends Stack {
         const { distribution } = new CloudFrontWebDistribution(this, {
             prefix: config.prefix,
             bucket: cfBucket,
-            description: `Web distribution for the static website (420connect - ${process.env.JIRA_TICKET_NUMBER}`,
+            description: `Web distribution for the static website (adme - ${process.env.JIRA_TICKET_NUMBER}`,
             acmCertificate: certificate,
             siteDomain: `${config.aws.r53.subdomainName}.${config.aws.r53.domainName}`,
         });

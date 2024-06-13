@@ -14,9 +14,18 @@ import {
     Firestore,
 } from 'firebase/firestore';
 
-const env = import.meta.env;
+// const env = import.meta.env;
+// const firebaseConfig = {
+//     apiKey: env.API_KEY,
+//     authDomain: env.AUTH_DOMAIN,
+//     projectId: env.PROJECT_ID,
+//     storageBucket: env.STORAGE_BUCKET,
+//     messagingSenderId: env.MESSAGING_SENDER_ID,
+//     appId: env.APP_ID,
+//     measurementId: env.MEASUREMENT_ID,
+// };
 const firebaseConfig = {
-    apiKey: env.VITE_API_KEY,
+    apiKey: 'AIzaSyBypr21n1k_yaIIQmUrzMqTeRj_rczyW3E',
     authDomain: 'portfolio-92e06.firebaseapp.com',
     projectId: 'portfolio-92e06',
     storageBucket: 'portfolio-92e06.appspot.com',
